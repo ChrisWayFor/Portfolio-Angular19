@@ -1,0 +1,59 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+if ! head -n1 "$1" | grep -q "^\(fix/DAT-\|feat/DAT-\|hot-fix\)"; then
+	echo ""
+	echo "==== Commit stoppé : nommage incorrect ===="
+	echo ""
+	echo "Les messages de commit doivent tous commencer par : "
+	echo "- fix/"
+	echo "- feat/"
+	echo "- hot-fix et de votre message"
+	echo ""
+	echo ""
+	exit 1
+fi
+
+SCRIPT_DIR="$( cd -- "$( dirname "$0" )" >/dev/null 2>&1 ; pwd -P )"
+
+
+## Php cs fixer
+cd "$SCRIPT_DIR"
+cd ../apps/back
+symfony php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix src --dry-run --diff
+
+status=$?
+if test $status -eq 0
+then
+	echo "php-cs-fixer OK"
+else
+	echo "php-cs-fixer KO"
+	exit 1
+fi
+
+# Phpstan
+cd "$SCRIPT_DIR"
+cd ../apps/back
+symfony php -d memory_limit=-1 vendor/phpstan/phpstan/phpstan analyse -c ../../.husky/phpstan-conf.neon --memory-limit 1G
+status=$?
+
+if test $status -eq 0
+then
+	echo "phpstan OK"
+else
+	echo "phpstan KO"
+	exit 1
+fi
+
+# Prettier front
+cd "$SCRIPT_DIR"
+cd ../apps/front
+ng lint
+status=$?
+if test $status -eq 0
+then
+	echo "front lint OK"
+else
+	echo "front lint KO"
+	exit 1
+fi
