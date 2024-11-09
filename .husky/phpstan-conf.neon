@@ -1,0 +1,13 @@
+includes:
+    - ergebnis.neon
+    - ../apps/back/vendor/phpstan/phpstan-doctrine/extension.neon
+parameters:
+    level: 9
+    excludePaths:
+    #    - ../apps/api/src/Gaufrette/Factory/SharepointAdapterFactory.php
+    paths:
+        - ../apps/back/src
+    doctrine:
+        objectManagerLoader: ../apps/back/tests/object-manager.php
+    checkGenericClassInNonGenericObjectType: false
+    treatPhpDocTypesAsCertain: false
