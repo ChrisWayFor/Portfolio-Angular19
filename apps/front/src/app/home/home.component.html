@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="hero-section">
+  <video autoplay loop muted playsinline class="video-background">
+    <source src="../../assets/videos/univers.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content-overlay">
+    <!-- Ton contenu ici -->
+    <h1>Bienvenue dans l'Univers</h1>
+    <p>Exploration et découverte infinies.</p>
+  </div>
+</div>
+
+
+
+<div class="transition-overlay">
+  <div class="transition-band left-band" [ngClass]="{'active': !showTransition}"></div>
+  <div class="transition-band right-band" [ngClass]="{'active': !showTransition}"></div>
+</div>
+
