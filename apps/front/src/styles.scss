@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Police-H1';
+  src: url('assets/fonts/ProximaNova-Bold.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Police-P';
+  src: url('assets/fonts/ProximaNova-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }

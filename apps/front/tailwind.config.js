@@ -4,8 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-
+    extend: {
+      fontFamily: {
+        'h1': ['Police-H1', 'sans-serif'],
+        'p' : ['Police-P', 'sans-serif'],
+      },
+    },
+    plugins: [],
+  }
+}

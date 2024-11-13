@@ -36,7 +36,6 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
@@ -47,7 +46,7 @@ export class HeaderComponent implements OnInit {
       this.currentLanguageLabel = selectedLanguage.label;
     }
     this.translate.use(langCode);
-    this.isDropdownOpen = false; // Ferme le menu déroulant après sélection
+    this.isDropdownOpen = false;
   }
 
   getCurrentLanguageFlag(): string {
