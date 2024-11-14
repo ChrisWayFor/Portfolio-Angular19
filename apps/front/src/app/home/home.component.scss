@@ -6,10 +6,11 @@ h1 {
   letter-spacing: -3.32px;
 }
 
-.highlight {
+::ng-deep.highlight {
   background: linear-gradient(to right, #404040, #000000);
-  padding: 0 5px;
-  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin-left: 10px;
   border-radius: 4px;
   color: #fff;
 }
@@ -22,11 +23,10 @@ hr {
   margin: 30px auto;
 }
 
-
 .circle {
-  width: 80px;
-  height: 80px;
-  background-color: #303030;
+  width: 60px;
+  height: 60px;
+  background-color: #30303000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -38,8 +38,6 @@ hr {
 .circle svg {
   width: 60px;
   height: 60px;
-  stroke: #ffffff;
-
 }
 
 @keyframes float {
@@ -52,25 +50,22 @@ hr {
 }
 
 .hero {
-  background: -moz-linear-gradient(45deg, #ffffff 0%, #c6c6c6 29%, #ffffff 66%, #f1f1f1 100%);
-  background: -webkit-linear-gradient(45deg, #ffffff 0%,#c4c4c4  29%,#ffffff 66%,#f1f1f1  100%);
-  background: linear-gradient(45deg, #ffffff 0%,#c0c0c0  29%,#ffffff 66%,#f1f1f1 100%);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 15s ease infinite;
+background: -moz-linear-gradient(45deg, #ffffff 0%, #c6c6c6 29%, #ffffff 66%, #f1f1f1 100%);
+background: -webkit-linear-gradient(45deg, #ffffff 0%,#c4c4c4  29%,#ffffff 66%,#f1f1f1  100%);
+background: linear-gradient(45deg, #ffffff 0%,#c0c0c0  29%,#ffffff 66%,#f1f1f1 100%);
+background-size: 400% 400%;
+-webkit-animation: Gradient 15s ease infinite;
 -moz-animation: Gradient 15s ease infinite;
 animation: Gradient 15s ease infinite;
-/*min-height: calc(100vh - 2rem);*/
 display: flex;
 flex-direction: column;
 align-items: stretch;
 justify-content: space-evenly;
 overflow: hidden;
-padding: 60px;
+padding: 70px;
 position: relative;
 border-top: 1px solid rgba(0, 0, 0, 0.1);
 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-/* Ombre pour le bord supérieur vers le bas */
 box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1),
             0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -167,56 +162,5 @@ to {
 .st14{clip-path:url(#SVGID_16_);}
 .st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
 
-/* Preloader */
-
-/* Ton code CSS ici pour le préloader */
-.vertical-centered-box {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.vertical-centered-box .content {
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.loader-circle {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
-  margin-left: -60px;
-  margin-top: -60px;
-}
-
-.loader-line-mask {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 60px;
-  height: 120px;
-  margin-left: -60px;
-  margin-top: -60px;
-  overflow: hidden;
-  transform-origin: 60px 60px;
-  animation: rotate 1.2s infinite linear;
-}
-
-.loader-line {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .5);
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+/* Scrollbar */
 

@@ -1,3 +1,4 @@
+//tabs style
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -28,15 +29,17 @@
   width: 100%;
 }
 
+// darkmode button
 input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
   position: relative;
   background-color: #8e9396;
-  width: 60px; /* Réduction de la largeur */
-  height: 24px; /* Réduction de la hauteur */
-  border-radius: 12px; /* Ajustement du border-radius */
+  width: 45px;
+  height: 24px;
+  border-radius: 12px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.7s ease;
@@ -46,10 +49,10 @@ input[type="checkbox"]::before {
   content: "";
   position: absolute;
   left: 0;
-  width: 24px; /* Réduction de la largeur */
-  height: 24px; /* Réduction de la hauteur */
+  width: 24px;
+  height: 24px;
   background-color: #fff;
-  border-radius: 12px; /* Ajustement du border-radius */
+  border-radius: 12px;
   transform: scale(0.8);
   transition: all 0.7s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -58,7 +61,7 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   background-color: #fff;
-  left: 36px; /* Ajustement du déplacement */
+  left: 21px;
 }
 
 input[type="checkbox"]:checked {
