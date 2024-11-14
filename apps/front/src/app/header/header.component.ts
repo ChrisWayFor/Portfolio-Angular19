@@ -7,13 +7,14 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
   imports: [CommonModule, TranslateModule]
 })
 
 export class HeaderComponent implements OnInit {
   isDropdownOpen = false;
   currentLanguageLabel = 'English';
-   // Langue par défaut
+  activeLink = '';
   languages = [
     { code: 'en', label: 'English', flag: 'flags/us.png' },
     { code: 'fr', label: 'Français', flag: 'flags/fr.png' },
@@ -25,7 +26,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Vérifie si une langue est déjà sélectionnée et définie
     const savedLang = localStorage.getItem('selectedLanguage');
     if (savedLang) {
       this.translate.use(savedLang);
@@ -53,4 +53,13 @@ export class HeaderComponent implements OnInit {
     const currentLanguage = this.languages.find(lang => lang.label === this.currentLanguageLabel);
     return currentLanguage ? currentLanguage.flag : '';
   }
+
+  setActiveLink(link: string) {
+    this.activeLink = link;
+  }
+
+  isActive(link: string): boolean {
+    return this.activeLink === link;
+  }
+
 }
