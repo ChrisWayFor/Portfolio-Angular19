@@ -27,3 +27,41 @@
 .nav-link.active::after {
   width: 100%;
 }
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background-color: #8e9396;
+  width: 60px; /* Réduction de la largeur */
+  height: 24px; /* Réduction de la hauteur */
+  border-radius: 12px; /* Ajustement du border-radius */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.7s ease;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px; /* Réduction de la largeur */
+  height: 24px; /* Réduction de la hauteur */
+  background-color: #fff;
+  border-radius: 12px; /* Ajustement du border-radius */
+  transform: scale(0.8);
+  transition: all 0.7s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+input[type="checkbox"]:checked::before {
+  background-color: #fff;
+  left: 36px; /* Ajustement du déplacement */
+}
+
+input[type="checkbox"]:checked {
+  background-color: #0984e3;
+}
+

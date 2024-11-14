@@ -30,24 +30,31 @@
           [class.active]="isActive('Portfolio')" (click)="setActiveLink('Portfolio')">
           Portfolio
         </a>
-        <a href="#responsive-header" class="nav-link block mt-4 mr-5 font-h1 lg:inline-block lg:mt-0"
+        <a href="#responsive-header" class="nav-link block mt-4 mr-10 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('Contact')" (click)="setActiveLink('Contact')">
           Contact
         </a>
       </div>
+      <div class="flex items-center justify-center">
+        <input type="checkbox" />
+      </div>
 
       <!-- Language Dropdown -->
       <div class="relative inline-block text-left ml-4">
+        <!-- Dropdown Button -->
         <button
-          class="dropdown-button flex items-center bg-white text-teal-500 px-4 py-2 rounded border border-gray-300 hover:bg-gray-100 focus:outline-none">
+          class="dropdown-button flex items-center bg-white text-teal-500 px-4 py-2 rounded border border-gray-300 hover:bg-gray-100 focus:outline-none"
+          (click)="toggleDropdown()">
           <img [src]="getCurrentLanguageFlag()" alt="Current language flag" class="w-5 h-5 mr-2">
           <span>&#9660;</span>
         </button>
+        <!-- Dropdown Menu -->
         <div *ngIf="isDropdownOpen"
-          class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+          class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
           <div class="py-1">
             <button *ngFor="let lang of languages"
-              class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
+              class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+              (click)="changeLanguage(lang.code)">
               <img [src]="lang.flag" alt="{{ lang.label }} flag" class="w-5 h-5 mr-2">
               {{ lang.label }}
             </button>
