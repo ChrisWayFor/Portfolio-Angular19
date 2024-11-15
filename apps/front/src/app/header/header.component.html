@@ -31,9 +31,10 @@
       </div>
 
       <!-- Dark mode button -->
-      <div class="flex ml-10 items-center">
-        <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()" />
-      </div>
+      <label class="switch flex ml-10 items-center">
+        <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()">
+        <span class="slider"></span>
+      </label>
 
       <!-- Language Dropdown -->
       <div class="relative inline-block text-left">
