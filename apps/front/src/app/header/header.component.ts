@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { DarkModeService } from '../services/dark-mode.service';
 
 @Component({
   selector: 'app-header',
@@ -10,19 +11,17 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss'],
   imports: [CommonModule, TranslateModule]
 })
-
 export class HeaderComponent implements OnInit {
   isDropdownOpen = false;
   currentLanguageLabel = 'English';
   activeLink = '';
-  darkModeEnabled = false;
   languages = [
     { code: 'en', label: 'English', flag: 'flags/us.png' },
     { code: 'fr', label: 'Français', flag: 'flags/fr.png' },
     { code: 'es', label: 'Español', flag: 'flags/es.png' }
   ];
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, public darkModeService: DarkModeService) {
     this.translate.setDefaultLang('en');
   }
 
@@ -36,11 +35,8 @@ export class HeaderComponent implements OnInit {
       }
     }
 
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode === 'enabled') {
-      this.darkModeEnabled = true;
-      document.documentElement.classList.add('dark');
-    }
+    // Let the service handle the initial dark mode setup
+    this.darkModeService.initializeDarkMode();
   }
 
   toggleDropdown() {
@@ -70,15 +66,10 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleDarkMode() {
-    this.darkModeEnabled = !this.darkModeEnabled;
-
-    if (this.darkModeEnabled) {
-      document.documentElement.classList.add('dark'); // Change ici
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      document.documentElement.classList.remove('dark'); // Change ici
-      localStorage.setItem('darkMode', 'disabled');
-    }
+    this.darkModeService.toggleDarkMode();
   }
 
+  isDarkModeEnabled(): boolean {
+    return this.darkModeService.isDarkModeEnabled();
+  }
 }

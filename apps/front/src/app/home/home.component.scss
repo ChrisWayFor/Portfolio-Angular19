@@ -15,12 +15,21 @@ h1 {
   color: #fff;
 }
 
+::ng-deep.dark .highlight {
+  background: linear-gradient(to right, hsla(0, 0%, 85%, 0.527), #ffffffe8);
+  color: #000000;
+}
+
 hr {
   border: 0;
   height: 1.5px;
   width: 50%;
   background: linear-gradient(to right, #cccccc00, #333, #cccccc00);
   margin: 30px auto;
+}
+
+::ng-deep.dark hr {
+  background: linear-gradient(to right, #cccccc00, #ffffff, #cccccc00);
 }
 
 .circle {
@@ -35,9 +44,18 @@ hr {
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
 }
 
+::ng-deep.dark .circle {
+  box-shadow: 0 5px 30px rgba(255, 255, 255, 0.133);
+}
+
 .circle svg {
   width: 60px;
   height: 60px;
+  fill: #303030;
+}
+
+::ng-deep.dark .circle svg {
+  fill: #ffffff !important;
 }
 
 @keyframes float {
@@ -51,8 +69,8 @@ hr {
 
 .hero {
 background: -moz-linear-gradient(45deg, #ffffff 0%, #c6c6c6 29%, #ffffff 66%, #f1f1f1 100%);
-background: -webkit-linear-gradient(45deg, #ffffff 0%,#c4c4c4  29%,#ffffff 66%,#f1f1f1  100%);
-background: linear-gradient(45deg, #ffffff 0%,#c0c0c0  29%,#ffffff 66%,#f1f1f1 100%);
+background: -webkit-linear-gradient(45deg, #ffffff 0%,#c6c6c6  29%,#ffffff 66%,#f1f1f1  100%);
+background: linear-gradient(45deg, #ffffff 0%,#c6c6c6  29%,#ffffff 66%,#f1f1f1 100%);
 background-size: 400% 400%;
 -webkit-animation: Gradient 15s ease infinite;
 -moz-animation: Gradient 15s ease infinite;
@@ -66,8 +84,27 @@ padding: 70px;
 position: relative;
 border-top: 1px solid rgba(0, 0, 0, 0.1);
 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1),
-            0 5px 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+::ng-deep.dark .hero {
+  background: -moz-linear-gradient(45deg, #000000 0%, #1a1a1a 29%, #000000 66%, #292929 100%);
+  background: -webkit-linear-gradient(45deg, #000000 0%, #1a1a1a 29%, #000000 66%, #292929 100%);
+  background: linear-gradient(45deg, #000000 0%, #1a1a1a 29%, #000000 66%, #292929 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding: 70px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.1), 0 5px 10px rgba(255, 255, 255, 0.1);
 }
 
 .hero::before,
@@ -76,7 +113,7 @@ content: "";
 width: 70vmax;
 height: 70vmax;
 position: absolute;
-background: rgba(255, 255, 255, 0.07);
+background: rgba(255, 255, 255, 0.114);
 left: -20vmin;
 top: -20vmin;
 animation: morph 15s linear infinite alternate, spin 20s linear infinite;
@@ -84,6 +121,11 @@ z-index: 1;
 will-change: border-radius, transform;
 transform-origin: 55% 55%;
 pointer-events: none;
+}
+
+::ng-deep.dark .hero::before,
+::ng-deep.dark .hero::after {
+  background: rgba(0, 0, 0, 0.141);
 }
 
 .hero::after {
@@ -145,29 +187,3 @@ to {
   transform: rotate(1turn);
 }
 }
-.st0{display:none;}
-.st1{display:inline;}
-.st2{opacity:0.29;}
-.st3{fill:#FFFFFF;}
-.st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
-.st5{clip-path:url(#SVGID_4_);}
-.st6{clip-path:url(#SVGID_6_);}
-.st7{clip-path:url(#SVGID_8_);}
-.st8{clip-path:url(#SVGID_10_);}
-.st9{fill:none;}
-.st10{clip-path:url(#SVGID_12_);}
-.st11{opacity:0.7;}
-.st12{clip-path:url(#SVGID_14_);}
-.st13{opacity:0.2;}
-.st14{clip-path:url(#SVGID_16_);}
-.st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
-
-/* DarkMode */
-.dark .custom-dark-shadow {
-  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.5), 0 2px 4px -1px rgba(255, 255, 255, 0.3) !important;
-  border: 1px solid red !important;
-}
-
-
-
-

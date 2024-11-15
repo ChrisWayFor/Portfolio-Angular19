@@ -31,5 +31,13 @@
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
-  transform-origin: center center; /* S'assure que le point se dilate à partir de son centre */
+  transform-origin: center center;
+}
+
+::ng-deep.dark .cursor-outline {
+  border: solid 3px #ffffffa1;
+}
+
+::ng-deep.dark .cursor-dot {
+  background-color: rgb(255, 255, 255);
 }

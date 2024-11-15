@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CursorAnimationComponent } from '../cursor-animation/cursor-animation.component';
+import { DarkModeService } from '../services/dark-mode.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,15 @@ import { CursorAnimationComponent } from '../cursor-animation/cursor-animation.c
 })
 export class HomeComponent {
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private darkModeService: DarkModeService) {
     this.translate.setDefaultLang('en');
+  }
+
+  toggleDarkMode() {
+    this.darkModeService.toggleDarkMode();
+  }
+
+  isDarkModeEnabled(): boolean {
+    return this.darkModeService.isDarkModeEnabled();
   }
 }

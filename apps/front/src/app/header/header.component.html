@@ -32,7 +32,7 @@
 
       <!-- Dark mode button -->
       <label class="switch flex ml-10 items-center">
-        <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()">
+        <input type="checkbox" id="darkModeToggle" [checked]="darkModeService.isDarkModeEnabled()" (change)="toggleDarkMode()">
         <span class="slider"></span>
       </label>
 
