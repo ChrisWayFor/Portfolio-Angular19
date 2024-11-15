@@ -10,7 +10,7 @@
       <div class="p-4 flex flex-col items-center justify-center">
         <h1 class="mb-4 items-center flex justify-center dark:text-white font-h1" [innerHTML]="'welcomeMessage' | translate"></h1>
         <hr>
-        <p class="flex text-center items-center justify-center dark:text-white pt-4 pb-10 font-p">{{ 'heroContent' | translate }}</p>
+        <p class="flex text-center items-center justify-center dark:text-white pt-4 pb-10 text-lg font-p">{{ 'heroContent' | translate }}</p>
         <div class="circle flex items-center mt-8 justify-center">
           <a href="#footer">
             <svg fill="#141414" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -37,11 +37,13 @@
 <!-- Section Projets -->
 <div class="container bg-[#fafafa] dark:bg-[#323232] pt-12 pb-20 p-4 shadow-xl">
   <div class="flex items-center justify-center mb-4">
-    <div class="h-px bg-gray-300 dark:bg-[#262626] w-1/4"></div>
-      <p class="text-sm mb-5 font-semibold text-gray-600 mx-4">{{ 'projects' | translate }}</p>
-    <div class="h-px bg-gray-300 dark:bg-[#262626] w-1/4"></div>
+    <div class="h-px bg-gray-300 dark:bg-[#ffffff] dark:opacity-55 w-1/5"></div>
+      <p class="text-sm font-semibold text-gray-600 dark:text-white dark:opacity-75 mx-4 flex-shrink-0">
+        {{ 'projects' | translate }}
+      </p>
+    <div class="h-px bg-gray-300 dark:bg-[#ffffff] dark:opacity-55 w-1/5"></div>
   </div>
-  <div class="projects flex justify-center gap-10 flex-wrap">
+  <div class="projects flex mt-10 justify-center gap-10 flex-wrap">
 
     <!-- Project Card 1 -->
     <div class="max-w-xs w-64 cursor-pointer bg-white dark:bg-[#262626] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
