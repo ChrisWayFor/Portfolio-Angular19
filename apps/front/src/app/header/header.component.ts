@@ -73,11 +73,12 @@ export class HeaderComponent implements OnInit {
     this.darkModeEnabled = !this.darkModeEnabled;
 
     if (this.darkModeEnabled) {
-      document.body.classList.add('dark');
+      document.documentElement.classList.add('dark'); // Change ici
       localStorage.setItem('darkMode', 'enabled');
     } else {
-      document.body.classList.remove('dark');
+      document.documentElement.classList.remove('dark'); // Change ici
       localStorage.setItem('darkMode', 'disabled');
     }
   }
+
 }
