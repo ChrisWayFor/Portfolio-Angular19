@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{html,ts}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -10,6 +11,6 @@ module.exports = {
         'p' : ['Police-P', 'sans-serif'],
       },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
 }

@@ -1,0 +1,8 @@
+ul > li > a > svg:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+
+#footer {
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); /* Ombre sur la bande du haut */
+}

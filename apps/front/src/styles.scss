@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @font-face {
   font-family: 'Police-H1';
@@ -13,8 +13,12 @@
   src: url('assets/fonts/ProximaNova-Light.ttf');
   font-weight: normal;
   font-style: normal;
-
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -37,4 +41,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #5e5e5e;
 }
-

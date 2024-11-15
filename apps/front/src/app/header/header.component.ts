@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   isDropdownOpen = false;
   currentLanguageLabel = 'English';
   activeLink = '';
+  darkModeEnabled = false;
   languages = [
     { code: 'en', label: 'English', flag: 'flags/us.png' },
     { code: 'fr', label: 'Français', flag: 'flags/fr.png' },
@@ -33,6 +34,12 @@ export class HeaderComponent implements OnInit {
       if (selectedLanguage) {
         this.currentLanguageLabel = selectedLanguage.label;
       }
+    }
+
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode === 'enabled') {
+      this.darkModeEnabled = true;
+      document.documentElement.classList.add('dark');
     }
   }
 
@@ -62,4 +69,15 @@ export class HeaderComponent implements OnInit {
     return this.activeLink === link;
   }
 
+  toggleDarkMode() {
+    this.darkModeEnabled = !this.darkModeEnabled;
+
+    if (this.darkModeEnabled) {
+      document.body.classList.add('dark');
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      document.body.classList.remove('dark');
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  }
 }

@@ -1,53 +1,46 @@
-<nav class="w-full bg-transparent">
-  <div class="nav max-w-screen-lg mx-auto px-4 flex items-center justify-between flex-wrap p-5">
+<nav class="w-full bg-transparent dark:bg-[#262626]">
+  <div class="nav max-w-screen-lg mx-auto px-4 flex items-center justify-between p-5">
 
     <!-- Logo Section -->
-    <div class="flex items-center flex-shrink-0 mr-6">
+    <div class="flex items-center flex-shrink-0">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" width="100" height="50">
-        <text x="10" y="35" font-family="police-h1, sans-serif" font-size="36" fill="black">C</text>
-        <text x="32" y="35" font-family="police-h1, sans-serif" font-size="36" fill="black">F</text>
+        <text x="10" y="35" font-family="police-h1, sans-serif" font-size="36" fill="black"
+          class="dark:fill-white">C</text>
+        <text x="32" y="35" font-family="police-h1, sans-serif" font-size="36" fill="black"
+          class="dark:fill-white">F</text>
       </svg>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="block lg:hidden">
-      <button
-        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
-    </div>
+    <!-- Right Section: Navigation, Dark Mode Toggle, Language Dropdown -->
+    <div class="flex items-center gap-7">
 
-    <!-- Navigation Links -->
-    <div class="w-full block lg:flex lg:items-center lg:w-auto">
-      <div class="text-l lg:flex lg:items-center gap-5 lg:flex-grow">
-        <a href="#responsive-header" class="nav-link block mt-4 mr-5 font-h1 lg:inline-block lg:mt-0"
+      <!-- Navigation Links -->
+      <div class="text-black dark:text-white text-l flex gap-10">
+        <a href="#responsive-header" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('A-propos')" (click)="setActiveLink('A-propos')">
           A-propos
         </a>
-        <a href="#responsive-header" class="nav-link block mt-4 mr-5 font-h1 lg:inline-block lg:mt-0"
+        <a href="#responsive-header" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('Portfolio')" (click)="setActiveLink('Portfolio')">
           Portfolio
         </a>
-        <a href="#responsive-header" class="nav-link block mt-4 mr-10 font-h1 lg:inline-block lg:mt-0"
+        <a href="#responsive-header" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('Contact')" (click)="setActiveLink('Contact')">
           Contact
         </a>
       </div>
 
-      <!-- darkmode button -->
-      <div class="flex items-center justify-center">
-        <input type="checkbox" />
+      <!-- Dark mode button -->
+      <div class="flex ml-10 items-center">
+        <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()" />
       </div>
 
       <!-- Language Dropdown -->
-      <div class="relative inline-block text-left ml-4">
+      <div class="relative inline-block text-left">
 
         <!-- Dropdown Button -->
         <button
-          class="dropdown-button flex items-center bg-white text-black px-4 py-2 rounded border border-gray-300 hover:bg-gray-100 focus:outline-none"
+          class="dropdown-button flex items-center bg-white text-black px-4 py-2 rounded border border-gray-300 hover:bg-gray-100 focus:outline-none dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700"
           (click)="toggleDropdown()">
           <img [src]="getCurrentLanguageFlag()" alt="Current language flag" class="w-5 h-5 mr-2">
           <span>&#9660;</span>
@@ -55,10 +48,10 @@
 
         <!-- Dropdown Menu -->
         <div *ngIf="isDropdownOpen"
-          class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+          class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10 dark:bg-gray-800 dark:ring-white dark:ring-opacity-10">
           <div class="py-1">
             <button *ngFor="let lang of languages"
-              class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+              class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-700"
               (click)="changeLanguage(lang.code)">
               <img [src]="lang.flag" alt="{{ lang.label }} flag" class="w-5 h-5 mr-2">
               {{ lang.label }}
