@@ -2,79 +2,116 @@
 <app-header></app-header>
 
 <!-- Hero -->
-  <div class="hero">
-    <div class="max-w-screen-lg mx-auto px-4 flex items-center justify-between flex-wrap">
+<div class="hero">
+  <div class="max-w-screen-lg mx-auto px-4 flex items-center justify-between flex-wrap">
 
-      <!-- Text Section -->
-      <div class="p-4 flex flex-col items-center justify-center">
-        <h1 class="mb-4 items-center flex justify-center dark:text-white font-h1" [innerHTML]="'welcomeMessage' | translate"></h1>
-        <hr>
-        <p class="flex text-center items-center justify-center dark:text-white pt-4 pb-10 text-lg font-p">{{ 'heroContent' | translate }}</p>
-        <div class="circle flex items-center mt-8 justify-center">
-          <a href="#footer">
-            <svg fill="#141414" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 492 492" xml:space="preserve">
+    <!-- Text Section -->
+    <div class="p-4 flex flex-col items-center justify-center">
+      <h1 class="mb-4 items-center flex justify-center dark:text-white font-h1"
+        [innerHTML]="'welcomeMessage' | translate"></h1>
+      <hr>
+      <h2 class="flex text-center items-center justify-center dark:text-white pt-4 pb-10 text-lg font-p">{{
+        'heroContent' | translate }}</h2>
+      <div class="circle flex items-center mt-8 justify-center">
+        <a href="#footer">
+          <svg fill="#141414" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492 492" xml:space="preserve">
+            <g>
               <g>
-                <g>
-                  <path d="M246,0C110.356,0,0,110.352,0,246s110.356,246,246,246c135.648,0,246-110.352,246-246S381.648,0,246,0z M353.78,296.076
-                    l-94.376,94.376c-3.604,3.604-8.432,5.592-13.592,5.592l-0.064,3.844l-0.068,0.004c-5.16,0-9.988-1.988-13.596-5.592l-94.344-94.348
-                    c-7.496-7.496-7.496-19.692,0-27.184l16.12-16.128c3.608-3.608,8.4-5.6,13.476-5.6c5.076,0,9.868,1.992,13.468,5.592l27.852,28.084
-                    c1.092,1.108,2.752,1.44,4.192,0.848c1.44-0.592,2.38-1.996,2.38-3.556v-159.04c0-10.42,9.016-19.224,19.688-19.224h22.804
-                    c10.488,0,19.024,8.62,19.024,19.224v157.88c0,1.556,0.932,2.956,2.368,3.552c1.436,0.588,3.088,0.264,4.192-0.828l27.06-26.96
-                    c3.612-3.612,8.448-5.604,13.616-5.604c5.168,0,10.004,1.992,13.616,5.608l16.148,16.12c3.616,3.616,5.608,8.444,5.612,13.592
-                    C359.372,287.64,357.388,292.464,353.78,296.076z"/>
-                </g>
+                <path d="M246,0C110.356,0,0,110.352,0,246s110.356,246,246,246c135.648,0,246-110.352,246-246S381.648,0,246,0z M353.78,296.076
+                  l-94.376,94.376c-3.604,3.604-8.432,5.592-13.592,5.592l-0.064,3.844l-0.068,0.004c-5.16,0-9.988-1.988-13.596-5.592l-94.344-94.348
+                  c-7.496-7.496-7.496-19.692,0-27.184l16.12-16.128c3.608-3.608,8.4-5.6,13.476-5.6c5.076,0,9.868,1.992,13.468,5.592l27.852,28.084
+                  c1.092,1.108,2.752,1.44,4.192,0.848c1.44-0.592,2.38-1.996,2.38-3.556v-159.04c0-10.42,9.016-19.224,19.688-19.224h22.804
+                  c10.488,0,19.024,8.62,19.024,19.224v157.88c0,1.556,0.932,2.956,2.368,3.552c1.436,0.588,3.088,0.264,4.192-0.828l27.06-26.96
+                  c3.612-3.612,8.448-5.604,13.616-5.604c5.168,0,10.004,1.992,13.616,5.608l16.148,16.12c3.616,3.616,5.608,8.444,5.612,13.592
+                  C359.372,287.64,357.388,292.464,353.78,296.076z" />
               </g>
-            </svg>
-          </a>
-        </div>
+            </g>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
-  
+</div>
+
 <!-- Section Projets -->
 <div class="container bg-[#fafafa] dark:bg-[#323232] pt-12 pb-20 p-4 shadow-xl">
   <div class="flex items-center justify-center mb-4">
     <div class="h-px bg-gray-300 dark:bg-[#ffffff] dark:opacity-55 w-1/5"></div>
-      <p class="text-sm font-semibold text-gray-600 dark:text-white dark:opacity-75 mx-4 flex-shrink-0">
-        {{ 'projects' | translate }}
-      </p>
+    <h3 class="text-sm font-semibold text-gray-600 dark:text-white dark:opacity-75 mx-4 flex-shrink-0">
+      {{ 'projects' | translate }}
+    </h3>
     <div class="h-px bg-gray-300 dark:bg-[#ffffff] dark:opacity-55 w-1/5"></div>
   </div>
-  <div class="projects flex mt-10 justify-center gap-10 flex-wrap">
 
-    <!-- Project Card 1 -->
-    <div class="max-w-xs w-64 cursor-pointer bg-white dark:bg-[#262626] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <div class="relative pb-[70%]">
-        <img src="https://via.placeholder.com/300x200" alt="Image" class="absolute w-full h-full object-cover">
-      </div>
-      <div class="p-3">
-        <h2 class="text-base font-medium mb-1 dark:text-white">Titre de la Carte</h2>
-        <p class="text-xs text-gray-700 dark:text-white mb-2">Description courte de la carte.</p>
+  <!-- Cards -->
+  <div class="max-w-screen-lg mx-auto p-4 grid gap-10 md:grid-cols-3">
+
+    <!-- Card 1 -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg h-60">
+      <img src="/pictures/univers.jpg" alt="Image"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-100 p-4 flex items-center justify-between">
+        <div class="flex flex-col">
+          <h4
+            class="text-lg font-semibold text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Titre de la carte 1
+          </h4>
+          <p class="text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Side-Project
+          </p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
       </div>
     </div>
 
-    <!-- Project Card 2 -->
-    <div class="max-w-xs w-64 bg-white dark:bg-[#262626] cursor-pointer shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out dark:custom-dark-shadow">
-      <div class="relative pb-[70%]">
-        <img src="https://via.placeholder.com/300x200" alt="Image" class="absolute w-full h-full object-cover">
-      </div>
-      <div class="p-3">
-        <h2 class="text-base font-medium mb-1 dark:text-white">Titre de la Carte</h2>
-        <p class="text-xs text-gray-700 dark:text-white mb-2">Description courte de la carte.</p>
+    <!-- Card 2 -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg h-60">
+      <img src="/pictures/moon.jpg" alt="Image"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-100 p-4 flex items-center justify-between">
+        <div class="flex flex-col">
+          <h4
+            class="text-lg font-semibold text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Titre de la carte 2
+          </h4>
+          <p class="text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Side-Project 2
+          </p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
       </div>
     </div>
 
-    <!-- Project Card 3 -->
-    <div class="max-w-xs w-64 bg-white dark:bg-[#262626] cursor-pointer shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <div class="relative pb-[70%]">
-        <img src="https://via.placeholder.com/300x200" alt="Image" class="absolute w-full h-full object-cover">
-      </div>
-      <div class="p-3">
-        <h2 class="text-base font-medium mb-1 dark:text-white">Titre de la Carte</h2>
-        <p class="text-xs text-gray-700  dark:text-white mb-2">Description courte de la carte.</p>
+    <!-- Card 3 -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg h-60">
+      <img src="/pictures/hero-picture.jpg" alt="Image"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-0 transition-all duration-500 group-hover:bg-opacity-100 p-4 flex items-center justify-between">
+        <div class="flex flex-col">
+          <h4 class="text-lg font-normal text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Titre de la carte 3
+          </h4>
+          <p class="text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Side-Project 3
+          </p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-1500">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
       </div>
     </div>
+
   </div>
 </div>
 
