@@ -1,5 +1,15 @@
 {
-  "welcomeMessage": "Développeur Web <span class='highlight'>Front-end</span>",
-  "heroContent": "Je suis un développeur web frontend passionné par la création d'interfaces utilisateur interactives et conviviales. Mon objectif : transformer des idées complexes en expériences fluides et intuitives. J'aime donner vie aux concepts, un pixel à la fois, en mêlant créativité, performance et accessibilité pour chaque utilisateur.",
-  "projects": "Quelques-uns de mes derniers travaux"
+  "home": {
+    "welcomeMessage": "Développeur Web <span class='highlight'>Front-end</span>",
+    "heroContent": "Je suis un développeur web frontend passionné par la création d'interfaces utilisateur interactives et conviviales. Mon objectif : transformer des idées complexes en expériences fluides et intuitives. J'aime donner vie aux concepts, un pixel à la fois, en mêlant créativité, performance et accessibilité pour chaque utilisateur.",
+    "projects": "Quelques-uns de mes derniers travaux"
+  },
+  "about": {
+    "aboutTitle": "À propos de moi",
+    "aboutDescription": "Je suis un développeur avec une forte passion pour la création d'expériences utilisateur exceptionnelles..."
+  },
+  "common": {
+    "contactUs": "Contactez-nous",
+    "learnMore": "En savoir plus"
+  }
 }

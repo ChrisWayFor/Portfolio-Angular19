@@ -1,3 +1,9 @@
-<main>
-  <router-outlet></router-outlet>
-</main>
+<app-header></app-header>
+
+<div class="page-container">
+  <div [@fadeInOut]="prepareRoute(outlet)" class="route-container">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>
+
+<app-footer></app-footer>

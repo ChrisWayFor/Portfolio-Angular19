@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  overflow-y: auto;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.route-container {
+  width: 100%;
+  position: relative;
+}

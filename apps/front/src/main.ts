@@ -6,6 +6,7 @@ import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '/i18n/', '.json');
@@ -16,6 +17,7 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     importProvidersFrom(
       HttpClientModule,
+      BrowserAnimationsModule,
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
@@ -26,4 +28,3 @@ bootstrapApplication(AppComponent, {
     )
   ]
 });
-

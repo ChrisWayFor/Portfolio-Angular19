@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { DarkModeService } from '../services/dark-mode.service';
+import { Router, NavigationEnd } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [CommonModule, TranslateModule]
+  imports: [CommonModule, TranslateModule, RouterModule]
 })
 export class HeaderComponent implements OnInit {
   isDropdownOpen = false;
@@ -21,7 +24,11 @@ export class HeaderComponent implements OnInit {
     { code: 'es', label: 'Español', flag: 'flags/es.png' }
   ];
 
-  constructor(private translate: TranslateService, public darkModeService: DarkModeService) {
+  constructor(
+    private translate: TranslateService,
+    public darkModeService: DarkModeService,
+    private router: Router // Inject Router
+  ) {
     this.translate.setDefaultLang('en');
   }
 
@@ -35,8 +42,32 @@ export class HeaderComponent implements OnInit {
       }
     }
 
-    // Let the service handle the initial dark mode setup
     this.darkModeService.initializeDarkMode();
+
+    // Automatically set the active link based on the current URL
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.updateActiveLink(this.router.url);
+      });
+
+    // Initialize active link on load
+    this.updateActiveLink(this.router.url);
+  }
+
+  updateActiveLink(url: string) {
+    // Define logic to set active link based on URL
+    if (url === '/') {
+      this.activeLink = '';
+    } else if (url.includes('about')) {
+      this.activeLink = 'A-propos';
+    } else if (url.includes('portfolio')) {
+      this.activeLink = 'Portfolio';
+    } else if (url.includes('contact')) {
+      this.activeLink = 'Contact';
+    } else {
+      this.activeLink = '';
+    }
   }
 
   toggleDropdown() {

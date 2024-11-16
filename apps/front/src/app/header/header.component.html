@@ -3,7 +3,7 @@
 
     <!-- Logo Section -->
     <div class="flex items-center flex-shrink-0">
-      <a href="/" class="transition-transform duration-300 transform hover:scale-110">
+      <a [routerLink]="['/']" class="transition-transform duration-300 transform hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" width="100" height="50">
           <text x="10" y="35" font-family="police-h1, sans-serif" font-size="36" fill="black"
             class="dark:fill-white">C</text>
@@ -18,7 +18,7 @@
 
       <!-- Navigation Links -->
       <div class="dark:text-white font-h1 flex gap-10">
-        <a href="/about" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
+        <a [routerLink]="['/about']" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('A-propos')" (click)="setActiveLink('A-propos')">
           A-propos
         </a>
