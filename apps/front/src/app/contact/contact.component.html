@@ -1,0 +1,67 @@
+<div [@fadeInOut]>
+
+<div class="contact-container min-h-screen bg-[#0F0F0F]">
+  <div class="container mx-auto px-4 py-24">
+    <!-- Header Section -->
+    <div class="header text-center mb-16">
+      <h1 class="text-white text-5xl md:text-7xl font-bold mb-6">Get in Touch</h1>
+      <p class="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+      </p>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-container max-w-2xl mx-auto">
+      <form (submit)="onSubmit()" class="space-y-8">
+        <div class="form-field">
+          <label for="name" class="sr-only">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+            class="w-full bg-[#1A1A1A] text-white py-3 px-4 rounded border border-[#2A2A2A] transition focus:outline-none focus:border-[#3A3A3A]"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="email" class="sr-only">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+            class="w-full bg-[#1A1A1A] text-white py-3 px-4 rounded border border-[#2A2A2A] transition focus:outline-none focus:border-[#3A3A3A]"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="message" class="sr-only">Message</label>
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+            class="w-full bg-[#1A1A1A] text-white py-3 px-4 rounded border border-[#2A2A2A] transition focus:outline-none focus:border-[#3A3A3A] resize-none"
+          ></textarea>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-white text-black font-bold py-3 px-6 rounded hover:bg-gray-200 transition"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Message -->
+      <div *ngIf="messageSent" class="success-message text-center text-green-500 mt-6">
+        Thank you for reaching out! I will get back to you soon.
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

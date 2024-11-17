@@ -26,7 +26,7 @@
           [class.active]="isActive('Portfolio')" (click)="setActiveLink('Portfolio')">
           Portfolio
         </a>
-        <a href="#responsive-header" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
+        <a [routerLink]="['/contact']" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('Contact')" (click)="setActiveLink('Contact')">
           Contact
         </a>
