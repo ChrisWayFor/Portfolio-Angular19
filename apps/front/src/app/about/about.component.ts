@@ -1,13 +1,14 @@
 import { Component, HostBinding } from '@angular/core';
-import { CursorAnimationComponent } from "../cursor-animation/cursor-animation.component";
 import { fadeInOutAnimation } from '../animations/route-animations';
+import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { DarkModeService } from '../services/dark-mode.service';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CursorAnimationComponent],
+  imports: [HeroComponent, TranslateModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   animations: [fadeInOutAnimation]

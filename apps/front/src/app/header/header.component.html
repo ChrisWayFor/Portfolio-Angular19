@@ -20,15 +20,15 @@
       <div class="dark:text-white font-h1 flex gap-10">
         <a [routerLink]="['/about']" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('A-propos')" (click)="setActiveLink('A-propos')">
-          A-propos
+          {{ 'nav.about' | translate }}
         </a>
         <a href="#responsive-header" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('Portfolio')" (click)="setActiveLink('Portfolio')">
-          Portfolio
+          {{ 'nav.portfolio' | translate }}
         </a>
         <a [routerLink]="['/contact']" class="nav-link block mt-4 font-h1 lg:inline-block lg:mt-0"
           [class.active]="isActive('Contact')" (click)="setActiveLink('Contact')">
-          Contact
+          {{ 'nav.contact' | translate }}
         </a>
       </div>
 

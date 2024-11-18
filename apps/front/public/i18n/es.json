@@ -1,4 +1,9 @@
 {
+  "nav": {
+    "about": "Sobre mí",
+    "portfolio": "Portafolio",
+    "contact": "Contacto"
+  },
   "home": {
     "welcomeMessage": "Desarrollador Web <span class='highlight'>Front-end</span>",
     "heroContent": "Soy un desarrollador web frontend apasionado por la creación de interfaces de usuario interactivas y fáciles de usar. Mi objetivo es transformar ideas complejas en experiencias fluidas e intuitivas. Me encanta dar vida a los conceptos, píxel a píxel, combinando creatividad, rendimiento y accesibilidad para cada usuario.",

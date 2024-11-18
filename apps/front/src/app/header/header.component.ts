@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translate: TranslateService,
     public darkModeService: DarkModeService,
-    private router: Router // Inject Router
+    private router: Router
   ) {
     this.translate.setDefaultLang('en');
   }
