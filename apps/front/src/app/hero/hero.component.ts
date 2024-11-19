@@ -5,11 +5,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { DarkModeService } from '../services/dark-mode.service';
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss']
+    selector: 'app-hero',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './hero.component.html',
+    styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
   @Input() title = '';

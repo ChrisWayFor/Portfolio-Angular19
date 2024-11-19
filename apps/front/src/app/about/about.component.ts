@@ -6,12 +6,11 @@ import { DarkModeService } from '../services/dark-mode.service';
 import { HeroComponent } from '../hero/hero.component';
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [HeroComponent, TranslateModule],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss',
-  animations: [fadeInOutAnimation]
+    selector: 'app-about',
+    imports: [HeroComponent, TranslateModule],
+    templateUrl: './about.component.html',
+    styleUrl: './about.component.scss',
+    animations: [fadeInOutAnimation]
 })
 export class AboutComponent {
   @HostBinding('@fadeInOut') fadeInOut = true;

@@ -8,11 +8,10 @@ import { RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  imports: [CommonModule, TranslateModule, RouterModule]
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    imports: [CommonModule, TranslateModule, RouterModule]
 })
 export class HeaderComponent implements OnInit {
   isDropdownOpen = false;

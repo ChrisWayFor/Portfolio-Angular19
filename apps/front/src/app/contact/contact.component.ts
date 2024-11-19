@@ -6,12 +6,11 @@ import { DarkModeService } from '../services/dark-mode.service';
 import { fadeInOutAnimation } from '../animations/route-animations';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  animations: [fadeInOutAnimation],
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+    selector: 'app-contact',
+    imports: [CommonModule, TranslateModule],
+    animations: [fadeInOutAnimation],
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   @HostBinding('@fadeInOut') fadeInOut = true;

@@ -7,12 +7,11 @@ import { fadeInOutAnimation } from '../animations/route-animations';
 import { HeroComponent } from '../hero/hero.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, HeroComponent],
-  animations: [fadeInOutAnimation],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    imports: [CommonModule, TranslateModule, HeroComponent],
+    animations: [fadeInOutAnimation],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
   @HostBinding('@fadeInOut') fadeInOut = true;
