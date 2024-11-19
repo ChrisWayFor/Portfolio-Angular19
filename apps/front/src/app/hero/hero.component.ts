@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
@@ -11,10 +11,10 @@ import { DarkModeService } from '../services/dark-mode.service';
     styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
-  @Input() title = '';
-  @Input() description = '';
-  @Input() imageUrl: string | null = null;
-  @Input() isAboutPage = false;
+  readonly title = input('');
+  readonly description = input('');
+  readonly imageUrl = input<string | null>(null);
+  readonly isAboutPage = input(false);
 
   constructor(private translate: TranslateService, private darkModeService: DarkModeService) {
     this.translate.setDefaultLang('en');

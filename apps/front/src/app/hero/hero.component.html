@@ -1,15 +1,15 @@
-<div class="hero" [class.about-page]="isAboutPage">
+<div class="hero" [class.about-page]="isAboutPage()">
   <div class="max-w-screen-lg mx-auto px-4 flex items-center justify-between flex-wrap">
 
     <!-- Image About Section -->
-    <div *ngIf="imageUrl" class="image-container p-4 flex items-center justify-center mb-4">
-      <img [src]="imageUrl" alt="Hero Image" class="object-contain" />
+    <div *ngIf="imageUrl()" class="image-container p-4 flex items-center justify-center mb-4">
+      <img [src]="imageUrl()" alt="Hero Image" class="object-contain" />
     </div>
 
     <!-- Text Section -->
     <div class="p-4 flex flex-col items-center justify-center">
-      <h1 class="mb-4 items-center flex justify-center dark:text-white font-h1" [innerHTML]="title"></h1>
-      <h2 class="flex text-center items-center justify-center dark:text-white pt-4 pb-10 text-lg font-p">{{ description }}</h2>
+      <h1 class="mb-4 items-center flex justify-center dark:text-white font-h1" [innerHTML]="title()"></h1>
+      <h2 class="flex text-center items-center justify-center dark:text-white pt-4 pb-10 text-lg font-p">{{ description() }}</h2>
       <div class="circle flex items-center mt-8 justify-center">
         <a (click)="scrollToFooter()" (keydown.enter)="scrollToFooter()" tabindex="0" role="button" class="cursor-pointer">
           <svg fill="#141414" height="800px" width="800px" version="1.1" id="Layer_1"
