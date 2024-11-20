@@ -8,6 +8,7 @@ import { HeroComponent } from '../hero/hero.component';
 
 @Component({
     selector: 'app-home',
+    standalone: true,
     imports: [CommonModule, TranslateModule, HeroComponent],
     animations: [fadeInOutAnimation],
     templateUrl: './home.component.html',

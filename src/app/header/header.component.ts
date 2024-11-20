@@ -9,6 +9,7 @@ import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-header',
+    standalone: true,
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     imports: [CommonModule, TranslateModule, RouterModule]

@@ -7,6 +7,7 @@ import { fadeInOutAnimation } from '../animations/route-animations';
 
 @Component({
     selector: 'app-contact',
+    standalone: true,
     imports: [CommonModule, TranslateModule],
     animations: [fadeInOutAnimation],
     templateUrl: './contact.component.html',

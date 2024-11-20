@@ -7,6 +7,7 @@ import { CursorAnimationComponent } from './cursor-animation/cursor-animation.co
 
 @Component({
     selector: 'app-root',
+    standalone: true,
     imports: [RouterOutlet, HeaderComponent, FooterComponent, CursorAnimationComponent],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
