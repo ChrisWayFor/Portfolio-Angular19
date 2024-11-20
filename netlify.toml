@@ -1,8 +1,7 @@
 [build]
-base = "apps/front"  # Remplacez par le chemin correct vers votre répertoire de base si nécessaire
-publish = "dist"  # Répertoire où se trouve votre build (à adapter selon votre projet)
-command = "npm run build"  # Commande utilisée pour construire votre projet
+publish = "dist"  # Répertoire où se trouve la sortie du build
+command = "npm run build"  # Commande pour construire votre projet
 
-# Si vous avez besoin de variables d'environnement :
+# Contextes de déploiement optionnels
 [context.production.environment]
   NODE_ENV = "production"
